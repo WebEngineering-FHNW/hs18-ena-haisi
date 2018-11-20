@@ -1,6 +1,10 @@
 package webec
 
+import java.nio.file.Files
+
 class BootStrap {
+
+    def grailsApplication
 
     def init = { servletContext ->
 
@@ -10,7 +14,13 @@ class BootStrap {
         def kunstTag = new Tag(name: "Kunst").save()
         def politikTag = new Tag(name: "Politik").save()
 
-        def poster = new Poster(name: "Überholen?", tags: [politikTag]).save()
+        def poster = new Poster(name: "Überholen?", artist: brockmann, tags: [politikTag]).save()
+
+        def resource = this.class.classLoader.getResource("data/ueberholen.jpg")
+        File file = new File(resource.file)
+        byte[] fileContent = Files.readAllBytes(file.toPath())
+        poster.featuredImageBytes = fileContent
+        poster.featuredImageContentType = "jpg"
 
     }
     def destroy = {
