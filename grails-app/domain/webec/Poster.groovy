@@ -25,4 +25,8 @@ class Poster {
         // Overhead is negligible
         tags lazy: false
     }
+
+    String toString() {
+        name
+    }
 }

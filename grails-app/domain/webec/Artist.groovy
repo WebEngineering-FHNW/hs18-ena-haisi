@@ -13,4 +13,8 @@ class Artist {
         description nullable: true
         description maxSize: 1024
     }
+
+    String toString() {
+        name
+    }
 }

@@ -8,4 +8,8 @@ class Tag {
         name minSize: 1
         name maxSize: 255
     }
+
+    String toString() {
+        name
+    }
 }
