@@ -11,5 +11,6 @@ class Artist {
         name maxSize: 255
         name minSize: 1
         description nullable: true
+        description maxSize: 1024
     }
 }
