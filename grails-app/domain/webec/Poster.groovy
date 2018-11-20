@@ -15,6 +15,9 @@ class Poster {
         description nullable: true
         featuredImageBytes nullable: true
         featuredImageContentType nullable: true
+
+        // Limit upload file size to 25MB
+        featuredImageBytes maxSize: 1024 * 1024 * 25
     }
 
     static mapping = {
