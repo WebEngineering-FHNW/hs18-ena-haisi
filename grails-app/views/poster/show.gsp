@@ -19,7 +19,10 @@
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:display bean="poster" />
+            <f:display bean="poster" except="featuredImageBytes"/>
+            <g:if test="${this.poster.featuredImageBytes}">
+                <img src="<g:createLink controller="poster" action="featuredImage" id="${this.poster.id}"/>" width="400"/>
+            </g:if>
             <g:form resource="${this.poster}" method="DELETE">
                 <fieldset class="buttons">
                     <g:link class="edit" action="edit" resource="${this.poster}"><g:message code="default.button.edit.label" default="Edit" /></g:link>

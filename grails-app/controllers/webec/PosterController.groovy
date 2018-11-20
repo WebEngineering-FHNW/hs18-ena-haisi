@@ -9,6 +9,16 @@ class PosterController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def featuredImage(Long id) {
+        Poster poster = posterService.get(id)
+        if (!poster || poster.featuredImageBytes == null) {
+            notFound()
+            return
+        }
+        render file: poster.featuredImageBytes,
+                contentType: poster.featuredImageContentType
+    }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond posterService.list(params), model:[posterCount: posterService.count()]
