@@ -38,6 +38,11 @@ class PosterController {
             return
         }
 
+        if(! params.file.filename.isEmpty()) {
+            poster.featuredImageBytes = params.file.bytes
+            poster.featuredImageContentType = params.file.contentType
+        }
+
         try {
             posterService.save(poster)
         } catch (ValidationException e) {
@@ -62,6 +67,11 @@ class PosterController {
         if (poster == null) {
             notFound()
             return
+        }
+
+        if(! params.file.filename.isEmpty()) {
+            poster.featuredImageBytes = params.file.bytes
+            poster.featuredImageContentType = params.file.contentType
         }
 
         try {

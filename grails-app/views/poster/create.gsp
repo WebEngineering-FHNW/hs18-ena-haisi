@@ -25,9 +25,10 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form resource="${this.poster}" method="POST">
+            <g:form resource="${this.poster}" method="POST" enctype="multipart/form-data">
                 <fieldset class="form">
-                    <f:all bean="poster"/>
+                    <f:all bean="poster" except="featuredImageBytes, featuredImageContentType"/>
+                    <input type="file" id="posterInput" name="file" />
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />

@@ -29,7 +29,8 @@
             <g:form resource="${this.poster}" method="PUT">
                 <g:hiddenField name="version" value="${this.poster?.version}" />
                 <fieldset class="form">
-                    <f:all bean="poster"/>
+                    <f:all bean="poster" except="featuredImageBytes, featuredImageContentType"/>
+                    <input type="file" id="posterInput" name="file" />
                 </fieldset>
                 <fieldset class="buttons">
                     <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
