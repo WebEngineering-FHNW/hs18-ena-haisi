@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        body {
+            margin:0 auto;
+        }
+
+        .ch-flag {
+            width: 100%;
+            height: 100%;
+            background-size: 100% auto;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMzIwIj4NCjxwYXRoIGZpbGw9IiNkNTJiMWUiIGQ9Im0wLDBoMzIwdjMyMGgtMzIweiIvPg0KPGcgZmlsbD0iI2ZmZiI+DQo8cGF0aCBkPSJtNjAsMTMwaDIwMHY2MGgtMjAweiIvPg0KPHBhdGggZD0ibTEzMCw2MGg2MHYyMDBoLTYweiIvPg0KPC9nPg0KPC9zdmc+DQo=') no-repeat left top;
+        }
+
+        nav {
+            width: 100%;
+            height: 3em;
+            background-color: #d52b1e;
+        }
+
+        .grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 50% 25% 25%;
+            grid-template-rows: 2em 1fr;
+        }
+
+        .poster {
+            background-color: gray;
+            width: 100%;
+            grid-column: 1;
+            grid-row: 1 / 2;
+        }
+
+        .artist-label {
+            background-color: green;
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .tags {
+            background-color: blue;
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .description {
+            background-color: #985f0d;
+            grid-column: 2 / 3;
+            grid-row: 2;
+        }
+
+        @media screen and (max-width: 480px) {
+
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="ch-flag">&nbsp;</div>
+</nav>
+<div id="foo" class="grid">
+    <!-- img width-->
+    <img class="poster" src="../conf/data/ueberholen.jpg">
+    <span class="artist-label">Artist</span>
+    <span class="tags">Tags</span>
+    <span class="description">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </span>
+
+</div>
+
+
+</body>
+</html>
