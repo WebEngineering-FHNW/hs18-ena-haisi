@@ -24,7 +24,7 @@
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 50% 50%;
-            grid-template-rows: 1fr;
+            grid-template-rows: auto;
             grid-template-areas:
                     "poster info-grid"
             ;
@@ -73,7 +73,7 @@
                 background-color: yellow;
                 grid-gap: 10px;
                 grid-template-columns: 100%;
-                grid-template-rows: 100%;
+                grid-template-rows: auto;
                 grid-template-areas:
                         "poster"
                         "info-grid"
@@ -87,7 +87,23 @@
 <nav>
     <div class="ch-flag">&nbsp;</div>
 </nav>
-<div id="foo" class="grid">
+<div class="grid">
+    <!-- img width-->
+    <img class="poster" src="../conf/data/ueberholen.jpg">
+
+    <div class="info-grid">
+        <span class="artist">Artist</span>
+        <span class="tags">Tags</span>
+        <span class="description">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </span>
+    </div>
+
+</div>
+
+<hr/>
+
+<div class="grid">
     <!-- img width-->
     <img class="poster" src="../conf/data/ueberholen.jpg">
 
