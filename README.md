@@ -29,7 +29,11 @@ As I am fairly experience with professional back-end development, I will focus o
 
 ## Project confirmation
 
-< to be filled by lecturer>
+Perfect.
+I like your approach that you extend your knowledge rather than applying what you already know.
+
+confirmed
+D. König
 
 
 ## Project delivery <to be filled by student>
