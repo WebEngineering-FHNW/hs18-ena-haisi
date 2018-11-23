@@ -14,15 +14,22 @@ class BootStrap {
         def kunstTag = new Tag(name: "Kunst").save()
         def politikTag = new Tag(name: "Politik").save()
 
-        def poster = new Poster(name: "Überholen?", artist: brockmann, tags: [politikTag]).save()
+        def uberholenPoster = new Poster(name: "Überholen? Im Zweifel nie!", artist: brockmann, tags: [politikTag]).save()
+        setImageFromResources(uberholenPoster, "ueberholen.jpg")
 
-        def resource = this.class.classLoader.getResource("data/ueberholen.jpg")
+        def opernhausPoster = new Poster(name: "Opernhaus Zürich", artist: brockmann, tags: [kunstTag]).save()
+        setImageFromResources(opernhausPoster, "opernhaus_zurich.jpg")
+
+    }
+
+    def setImageFromResources(Poster poster, String fileName) {
+        def resource = this.class.classLoader.getResource("data/${fileName}")
         File file = new File(resource.file)
         byte[] fileContent = Files.readAllBytes(file.toPath())
         poster.featuredImageBytes = fileContent
-        poster.featuredImageContentType = "jpg"
-
+        poster.featuredImageContentType = file.name.take(file.name.lastIndexOf('.'))
     }
+
     def destroy = {
     }
 }
