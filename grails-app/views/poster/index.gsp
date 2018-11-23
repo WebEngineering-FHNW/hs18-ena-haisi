@@ -18,7 +18,7 @@
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${posterList}" />
+            <f:table collection="${posterList}" except="featuredImageContentType, featuredImageBytes" />
 
             <div class="pagination">
                 <g:paginate total="${posterCount ?: 0}" />
