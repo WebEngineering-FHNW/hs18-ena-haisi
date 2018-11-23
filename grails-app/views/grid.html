@@ -8,9 +8,8 @@
         }
 
         .ch-flag {
-            width: 100%;
-            height: 100%;
-            background-size: 100% auto;
+            width: 3em;
+            height: 3em;
             background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMzIwIj4NCjxwYXRoIGZpbGw9IiNkNTJiMWUiIGQ9Im0wLDBoMzIwdjMyMGgtMzIweiIvPg0KPGcgZmlsbD0iI2ZmZiI+DQo8cGF0aCBkPSJtNjAsMTMwaDIwMHY2MGgtMjAweiIvPg0KPHBhdGggZD0ibTEzMCw2MGg2MHYyMDBoLTYweiIvPg0KPC9nPg0KPC9zdmc+DQo=') no-repeat left top;
         }
 
@@ -18,6 +17,13 @@
             width: 100%;
             height: 3em;
             background-color: #d52b1e;
+            align-content: center;
+            display: flex;
+        }
+
+        nav > a {
+            align-self: center;
+            color: white;
         }
 
         .grid {
@@ -85,7 +91,8 @@
 <body>
 
 <nav>
-    <div class="ch-flag">&nbsp;</div>
+    <div class="ch-flag"></div>
+    <a href="/admin">Admin</a>
 </nav>
 <div class="grid">
     <!-- img width-->
