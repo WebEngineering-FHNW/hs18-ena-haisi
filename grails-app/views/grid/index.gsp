@@ -93,7 +93,7 @@
 
 <nav>
     <div class="ch-flag"></div>
-    <a href="/admin">Admin</a>
+    <a href="/admin">${message(code:'grid.admin', default: 'Admin')}</a>
 </nav>
 
 <g:each in="${posterList}" var="poster">
