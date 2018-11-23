@@ -20,6 +20,9 @@ class BootStrap {
         def opernhausPoster = new Poster(name: "Opernhaus Zürich", artist: brockmann, tags: [kunstTag]).save()
         setImageFromResources(opernhausPoster, "opernhaus_zurich.jpg")
 
+        def machMitPoster = new Poster(name: "Chum mach mit", description: "Jahr 1962", artist: hamburg, tags: [politikTag]).save()
+        setImageFromResources(machMitPoster, "mach_mit.jpg")
+
     }
 
     def setImageFromResources(Poster poster, String fileName) {
