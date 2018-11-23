@@ -32,7 +32,6 @@
 
     .grid {
         display: grid;
-        grid-gap: 10px;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto;
         grid-template-areas: "poster info-grid";
@@ -43,27 +42,25 @@
         grid-template-columns: 50% 50%;
         grid-template-rows: 3em 1fr;
         grid-template-areas: "artist tags" "description description";
+        padding-left: 1em;
     }
 
     .poster {
         grid-area: poster;
-        background-color: gray;
         width: 100%;
     }
 
     .artist {
         grid-area: artist;
-        background-color: green;
     }
 
     .tags {
         grid-area: tags;
-        background-color: blue;
+        text-align: right;
     }
 
     .description {
         grid-area: description;
-        background-color: #985f0d;
     }
 
     @media only screen and (max-device-width: 480px) {
