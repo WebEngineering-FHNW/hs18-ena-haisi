@@ -8,7 +8,7 @@ Project idea short description:
 
 In appreciation of Swiss Style and Swiss Typography this project will be the place to learn about famous artists and
 their works - specifically posters.  
-As I am fairly experience with professional back-end development, I will focus on creating a appealing UI.
+As I am fairly experience with professional back-end development, I will focus on creating an appealing UI.
 
 ### Possible Workflow
 
