@@ -47,9 +47,15 @@ project description:      (if other than `index.html` in project root directory)
 
 External contributions:
 
-Other comments: 
+- https://www.phoca.cz/cssflags/ for the svg of the Swiss flag.
 
-I'm particular proud of:
+Other comments: -
+
+I'm particular proud of:  
+
+- Using CSS grid-layout and flexbox-layout.
+- Having the file-upload in the same 'form' as the rest of the poster creation. 
+The official guide used a separate form.
 
 
 ## Project grading 
