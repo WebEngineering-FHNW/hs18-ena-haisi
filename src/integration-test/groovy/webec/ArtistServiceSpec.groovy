@@ -13,14 +13,12 @@ class ArtistServiceSpec extends Specification {
     SessionFactory sessionFactory
 
     private Long setupData() {
-        // TODO: Populate valid domain instances and return a valid ID
-        //new Artist(...).save(flush: true, failOnError: true)
-        //new Artist(...).save(flush: true, failOnError: true)
-        //Artist artist = new Artist(...).save(flush: true, failOnError: true)
-        //new Artist(...).save(flush: true, failOnError: true)
-        //new Artist(...).save(flush: true, failOnError: true)
-        assert false, "TODO: Provide a setupData() implementation for this generated test suite"
-        //artist.id
+        new Artist(name: "Artist 1", description: "Desc 1").save(flush: true, failOnError: true)
+        new Artist(name: "Artist 2", description: "Desc 2").save(flush: true, failOnError: true)
+        Artist artist = new Artist(name: "Artist 3", description: "Desc 3").save(flush: true, failOnError: true)
+        new Artist(name: "Artist 4", description: "Desc 4").save(flush: true, failOnError: true)
+        new Artist(name: "Artist 5", description: "Desc 5").save(flush: true, failOnError: true)
+        artist.id
     }
 
     void "test get"() {
@@ -38,7 +36,6 @@ class ArtistServiceSpec extends Specification {
 
         then:
         artistList.size() == 2
-        assert false, "TODO: Verify the correct instances are returned"
     }
 
     void "test count"() {
@@ -64,8 +61,7 @@ class ArtistServiceSpec extends Specification {
 
     void "test save"() {
         when:
-        assert false, "TODO: Provide a valid instance to save"
-        Artist artist = new Artist()
+        Artist artist = new Artist(name: "foobar", description: "desc")
         artistService.save(artist)
 
         then:
