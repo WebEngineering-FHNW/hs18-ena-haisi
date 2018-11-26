@@ -11,8 +11,12 @@ class PosterSpec extends Specification implements DomainUnitTest<Poster> {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test valid image data type"() {
+        when:
+        domain.featuredImageContentType = "exe"
+
+        then:
+        !domain.validate(['featuredImageContentType'])
+        domain.errors['featuredImageContentType'].code == 'image content type is not supported!'
     }
 }
