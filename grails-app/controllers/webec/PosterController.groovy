@@ -38,7 +38,7 @@ class PosterController {
             return
         }
 
-        if(! params.file.filename.isEmpty()) {
+        if(params.hasProperty("file") && ! params.file.filename.isEmpty()) {
             poster.featuredImageBytes = params.file.bytes
             poster.featuredImageContentType = params.file.contentType
         }
@@ -69,7 +69,7 @@ class PosterController {
             return
         }
 
-        if(! params.file.filename.isEmpty()) {
+        if(params.hasProperty("file") && ! params.file.filename.isEmpty()) {
             poster.featuredImageBytes = params.file.bytes
             poster.featuredImageContentType = params.file.contentType
         }
