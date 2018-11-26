@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project Description</title>
 
-    <style type="text/css">
+    <style>
         body {
             margin: 40px auto;
             max-width: 650px;
             line-height: 1.6;
             font-size: 18px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             color: #454545;
             padding: 0 10px
+        }
+
+        header {
+            display: flex;
+        }
+
+        /* EXTERNAL https://www.phoca.cz/cssflags/ */
+        .ch-flag {
+            width: 2.0em;
+            height: 2.0em;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMzIwIj4NCjxwYXRoIGZpbGw9IiNkNTJiMWUiIGQ9Im0wLDBoMzIwdjMyMGgtMzIweiIvPg0KPGcgZmlsbD0iI2ZmZiI+DQo8cGF0aCBkPSJtNjAsMTMwaDIwMHY2MGgtMjAweiIvPg0KPHBhdGggZD0ibTEzMCw2MGg2MHYyMDBoLTYweiIvPg0KPC9nPg0KPC9zdmc+DQo=') no-repeat left top;
+            align-self: center;
+            margin-left: 1em;
         }
 
         h1, h2, h3 {
@@ -23,6 +37,34 @@
 
 </head>
 <body>
-<p>my project description as static html ...</p>
+<header>
+    <h1>Poster Art</h1>
+    <div class="ch-flag"></div>
+</header>
+
+<section title="About">
+    <h2>About</h2>
+    <p>In appreciation of Swiss Style and Swiss Typography this project is be the place
+        to learn about famous artists and their works - specifically posters.</p>
+</section>
+
+<section title="User Area">
+    <h2>User Area</h2>
+    <p>Displays all uploaded posters and their information in a grid system.</p>
+    <p>Using CSS grid-layout and flexbox-layout was a major focus of this project in order to increase
+        my knowledge on these subjects.</p>
+</section>
+
+<section title="Admin Aage">
+    <h2>Admin Page</h2>
+    <p>The admin page is used to do all <abbr title="Create Read Update Delete">CRUD</abbr> operations.</p>
+    <p>This side of the web-app is solly used for functionality reasons and is therefor purely functional.</p>
+</section>
+
+<footer>
+    <hr/>
+    &copy; Hasan Selman Kara
+</footer>
+
 </body>
 </html>
