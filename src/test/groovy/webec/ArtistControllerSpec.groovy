@@ -10,9 +10,7 @@ class ArtistControllerSpec extends Specification implements ControllerUnitTest<A
     def populateValidParams(params) {
         assert params != null
 
-        // TODO: Populate valid properties like...
-        //params["name"] = 'someValidName'
-        assert false, "TODO: Provide a populateValidParams() implementation for this generated test suite"
+        params["name"] = 'Artist 11'
     }
 
     void "Test the index action returns the correct model"() {
@@ -172,6 +170,8 @@ class ArtistControllerSpec extends Specification implements ControllerUnitTest<A
         then:"A redirect is issued to the show action"
         response.redirectedUrl == '/artist/show/1'
         controller.flash.message != null
+
+
     }
 
     void "Test the update action with an invalid instance"() {
