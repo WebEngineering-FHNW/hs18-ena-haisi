@@ -36,7 +36,7 @@ class BootStrap {
         File file = new File(resource.file)
         byte[] fileContent = Files.readAllBytes(file.toPath())
         poster.featuredImageBytes = fileContent
-        poster.featuredImageContentType = file.name.take(file.name.lastIndexOf('.'))
+        poster.featuredImageContentType = file.name.substring(file.name.lastIndexOf('.') + 1)
     }
 
     def destroy = {
