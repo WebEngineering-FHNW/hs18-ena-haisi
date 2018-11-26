@@ -80,7 +80,6 @@
 
         .grid {
             display: grid;
-            background-color: yellow;
             grid-gap: 10px;
             grid-template-columns: 100%;
             grid-template-rows: auto;
