@@ -16,7 +16,7 @@
         background-color: #ecf4f1;
     }
 
-    /* Source: https://www.phoca.cz/cssflags/ */
+    /* EXTERNAL https://www.phoca.cz/cssflags/ */
     .ch-flag {
         width: 3em;
         height: 3em;
