@@ -10,9 +10,4 @@ class GridControllerSpec extends Specification implements ControllerUnitTest<Gri
 
     def cleanup() {
     }
-
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
 }

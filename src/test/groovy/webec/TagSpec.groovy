@@ -10,9 +10,4 @@ class TagSpec extends Specification implements DomainUnitTest<Tag> {
 
     def cleanup() {
     }
-
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
 }

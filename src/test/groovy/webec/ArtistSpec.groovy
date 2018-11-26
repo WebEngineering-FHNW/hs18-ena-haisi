@@ -10,9 +10,4 @@ class ArtistSpec extends Specification implements DomainUnitTest<Artist> {
 
     def cleanup() {
     }
-
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
 }
