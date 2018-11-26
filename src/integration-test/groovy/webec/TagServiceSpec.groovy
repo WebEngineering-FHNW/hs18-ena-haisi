@@ -13,14 +13,12 @@ class TagServiceSpec extends Specification {
     SessionFactory sessionFactory
 
     private Long setupData() {
-        // TODO: Populate valid domain instances and return a valid ID
-        //new Tag(...).save(flush: true, failOnError: true)
-        //new Tag(...).save(flush: true, failOnError: true)
-        //Tag tag = new Tag(...).save(flush: true, failOnError: true)
-        //new Tag(...).save(flush: true, failOnError: true)
-        //new Tag(...).save(flush: true, failOnError: true)
-        assert false, "TODO: Provide a setupData() implementation for this generated test suite"
-        //tag.id
+        new Tag(name: "tag1").save(flush: true, failOnError: true)
+        new Tag(name: "tag2").save(flush: true, failOnError: true)
+        Tag tag = new Tag(name:  "tag2").save(flush: true, failOnError: true)
+        new Tag(name: "tag4").save(flush: true, failOnError: true)
+        new Tag(name: "tag5").save(flush: true, failOnError: true)
+        tag.id
     }
 
     void "test get"() {
@@ -38,7 +36,6 @@ class TagServiceSpec extends Specification {
 
         then:
         tagList.size() == 2
-        assert false, "TODO: Verify the correct instances are returned"
     }
 
     void "test count"() {
@@ -64,8 +61,7 @@ class TagServiceSpec extends Specification {
 
     void "test save"() {
         when:
-        assert false, "TODO: Provide a valid instance to save"
-        Tag tag = new Tag()
+        Tag tag = new Tag(name: "Foo")
         tagService.save(tag)
 
         then:

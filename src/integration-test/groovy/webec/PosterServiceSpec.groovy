@@ -13,14 +13,14 @@ class PosterServiceSpec extends Specification {
     SessionFactory sessionFactory
 
     private Long setupData() {
-        // TODO: Populate valid domain instances and return a valid ID
-        //new Poster(...).save(flush: true, failOnError: true)
-        //new Poster(...).save(flush: true, failOnError: true)
-        //Poster poster = new Poster(...).save(flush: true, failOnError: true)
-        //new Poster(...).save(flush: true, failOnError: true)
-        //new Poster(...).save(flush: true, failOnError: true)
-        assert false, "TODO: Provide a setupData() implementation for this generated test suite"
-        //poster.id
+        def brockmann = new Artist(name: "Josef Müller-Brockmann", description: "Foo").save(flush: true, failOnError: true)
+
+        new Poster(name: "Poster 1", artist: brockmann).save(flush: true, failOnError: true)
+        new Poster(name: "Poster 2", artist: brockmann).save(flush: true, failOnError: true)
+        Poster poster = new Poster(name: "Poster 3", artist: brockmann).save(flush: true, failOnError: true)
+        new Poster(name: "Poster 4", artist: brockmann).save(flush: true, failOnError: true)
+        new Poster(name: "Poster 5", artist: brockmann).save(flush: true, failOnError: true)
+        poster.id
     }
 
     void "test get"() {
@@ -38,7 +38,6 @@ class PosterServiceSpec extends Specification {
 
         then:
         posterList.size() == 2
-        assert false, "TODO: Verify the correct instances are returned"
     }
 
     void "test count"() {
@@ -64,8 +63,8 @@ class PosterServiceSpec extends Specification {
 
     void "test save"() {
         when:
-        assert false, "TODO: Provide a valid instance to save"
-        Poster poster = new Poster()
+        def artist = new Artist(name: "Artsy").save(flush: true, failOnError: true)
+        Poster poster = new Poster(name: "Foo", artist: artist)
         posterService.save(poster)
 
         then:
