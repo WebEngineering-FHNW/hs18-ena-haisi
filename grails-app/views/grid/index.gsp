@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -98,7 +98,7 @@
 
 <g:each in="${posterList}" var="poster">
     <div class="grid">
-        <img class="poster" src="<g:createLink controller="poster" action="featuredImage" id="${poster.id}"/>"/>
+        <img class="poster" alt="${poster.name}" src="<g:createLink controller="poster" action="featuredImage" id="${poster.id}"/>"/>
 
         <div class="info-grid">
             <span class="artist">${poster.artist}</span>
